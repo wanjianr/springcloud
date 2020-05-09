@@ -1,0 +1,18 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: cloud-payment-service
+  datasource:
+    druid:
+      validation-query: select 1
+    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver        #mysql驱动包com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.106.227.33:3306/cloud2020?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: Mysql5.7
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.douye.springcloud.entities       #所有Entity别
